@@ -426,7 +426,7 @@ body::-webkit-scrollbar-thumb {
   }  
   
   @media (max-width: 576px) {
-    .grid-item {
+   
       margin-bottom: 20px;
     }
   }

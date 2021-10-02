@@ -643,7 +643,7 @@ ul {
   border: 1px solid transparent;
   font-size: 15px;
   font-weight: 500;
-  padding: 5px 35px;
+  padding: 12px 54px;
   border-radius: 30px;
   color: #fff;
   border: 1px solid #edeff2;
@@ -745,7 +745,7 @@ ul {
   padding: 40px 35px;
   font-family: "Barlow Semi Condensed", sans-serif;
   text-transform: uppercase;
-  line-height: 0px;
+  line-height: 12px;
   font-weight: 600;
 }
 
@@ -781,13 +781,6 @@ ul {
 /* line 74, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
 .main_menu .single_page_logo {
   display: none;
-}
-
-@media (max-width: 975px) {
-   
-  .signup-logo {
-    display: none;
-  }
 }
 
 
@@ -943,7 +936,6 @@ ul {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
   top: 0;
   background-color: #562fc7;
-  height: 12%;
 }
 
 /* line 313, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
@@ -2151,8 +2143,9 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   margin: auto;
   top: 0;
-  left: 50vw;
+      left: 45vw;
   right: 0;
+  /* bottom: 0; */
   width: 300px;
   height: 100px;
   z-index: 1000;
@@ -2171,12 +2164,11 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 60px;
   height: 60px;
-  /* background: #FF4800; */
+  background: #FF4800;
   border-radius: 50%;
   transition: all 1s;
   z-index: 4;
-  /* box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4); */
-  z-index: -1;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
 }
 .searchcontainer .search:hover {
   cursor: pointer;
@@ -2191,12 +2183,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 22px;
   width: 12px;
   height: 2px;
-  /* background: white; */
-  /* transform: rotate(45deg); */
+  background: white;
+  transform: rotate(45deg);
   transition: all 0.5s;
 }
 .searchcontainer .search::after {
-  /* content: ""; */
+  content: "";
   position: absolute;
   margin: auto;
   top: -5px;
@@ -2212,21 +2204,21 @@ h1, h2, h3, h4, h5, h6 {
 .searchcontainer input {
   font-family: "Inconsolata", monospace;
   position: absolute;
-  margin: 10px auto;
-  top: 9px;
+  margin: auto;
+  top: 0;
   right: 0;
   bottom: 0;
-  left: 0px;
-  width: 30px;
-  height: 40px;
+  left: 0;
+  width: 50px;
+  height: 50px;
   outline: none;
   border: none;
-  background: #ffffff;
-  color: #ff4800;
-  text-shadow: 0 0 10px #ffffff;
+  background: #FF4800;
+  color: white;
+  text-shadow: 0 0 10px #FF4800;
   padding: 0 80px 0 20px;
   border-radius: 30px;
-  box-shadow: 0 0 25px 0 #ff4800, 0 20px 25px 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 0 25px 0 #FF4800, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
   transition: all 1s;
   opacity: 0;
   z-index: 5;
@@ -2237,13 +2229,13 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 .searchcontainer input:focus {
-  width: 200px;
+  width: 300px;
   opacity: 1;
   cursor: text;
 }
 .searchcontainer input:focus ~ .search {
   right: -250px;
-  /* background: #151515; */
+  background: #151515;
   z-index: 6;
 }
 .searchcontainer input:focus ~ .search::before {

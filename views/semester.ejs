@@ -6,7 +6,6 @@
         <title>Semester</title>
         <link rel="icon" href="/img/favicon.png">
         <link rel="stylesheet" href="/css/bookcard.css">
-        <link rel="stylesheet" href="/css/semester_card_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <style>
 .developers-details{
@@ -107,7 +106,7 @@
 }
 </style>
     </head>
-    <body style="margin:0;overflow-x: hidden;background:#EDEDED;">
+    <body style="overflow-x: hidden;background:#f7edd5;">
         <div id="preloader">
         <div id="loader"></div>
     </div>
@@ -165,37 +164,28 @@
                   </li>
               </ul>
         </div>
-
-        <!-- CARDS -->
         <% var count = 1 %>
-    <div class="container">
-        <div class="row">
-<<<<<<< HEAD
-            <% notes.forEach((note, i) => { %>
-            <div class="card">
-                <img class="sem_img" src="/img/semester/<%= i+1 %>.png">
-=======
+        <div class="grid-container">
             <% notes.forEach((note) => { %>
-            <div class="card">
-                <img class="sem_img" src="/img/Frame 1 (1).png">
->>>>>>> 352d21d8440aa662ea1e51acf403a97df49d6b00
-                <div class="details">
-                    <h2>Semester <%= count%></h2>
-                    <div class="details-body">
-                        <p>No of uploads : <%= note==0 ? 0 : note.length %></p>
-                        <p>No of downloads : <%=downloadCount[count-1]%></p>
-                        <p>Overall rating : <%= ratingsPerSemFloored[count-1] %></p>
-                    </div>
-                    <div class="buttons">
-                        <button class="notes_btn" type="button"><a href="/users/branch/semester/notes?branch=<%= branchname %>&semester=<%=count %>&Notescount=<%= note==0 ? 0 : note.length %>">View Notes</a></button>
-                        <button class="questions-btn" type="button"><a href="/users/branch/semester/question?branch=<%= branchname %>&semester=<%=count %>&Notescount=<%= note==0 ? 0 : note.length %>">View Ques Paper</a></button>
+            
+                <div class="container1 grid-item">
+                    
+                    <div class="content">No. of Uploads : <%= note==0 ? 0 : note.length %></div>
+                    <div class="content">No. of Downloads : <%=downloadCount[count-1]%></div>
+                    <div class="content">Overall Rating : <%= ratingsPerSemFloored[count-1] %></div>
+                    <div class="notes content"style="position:relative;top:54px"><a href="/users/branch/semester/notes?branch=<%= branchname %>&semester=<%=count %>&Notescount=<%= note==0 ? 0 : note.length %>">View Notes</a></div>
+                    <div class="notes content" style="position:relative;top:45px"><a href="/users/branch/semester/question?branch=<%= branchname %>&semester=<%=count %>&Notescount=<%= note==0 ? 0 : note.length %>">View Ques Paper</a></div>
+                    <div class="cover">
+                        <figure class="front">
+                            <div class="heading1">SEMESTER</div>
+                            <div class="heading1 sem"><%= count%></div>
+                        </figure>
+                        <figure class="back"></figure>
                     </div>
                 </div>
-            </div>
-            <% count = count+1 %>
+                <% count = count+1 %>
             <% }); %>
-        </div>    
-    </div> 
+        </div>
         
 
          <!--::footer_part start::-->

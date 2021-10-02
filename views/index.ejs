@@ -10,51 +10,27 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="/css/all.css">
-    <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/flaticon.css">
     <link rel="stylesheet" href="/css/themify-icons.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/index2.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script>
-	    $(document).ready(openModal());
-        setTimeout(openModal,500);
-        function openModal(){
-            $("#myModal").modal({
-                show:true,
-                focus:true,
-                keyboard:true
-            });
-        }
-    </script>
-<style>
-    /* new navbar */
-    .nav-images
-    {
-       position: relative;
-       top: 10%;
-       left: 7.5rem;
-       z-index: 2;
-       padding-right: 30px;
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(openModal());
+    setTimeout(openModal,500);
+    function openModal(){
+        $("#myModal").modal({
+            show:true,
+            focus:true,
+            keyboard:true
+        });
     }
-    .signup-logo
-    {
-      position: relative;
-      right: 2rem;
-      /* top: 0.3rem; */
-      width: 50%;
-    }
-    .nav-links {
-      font-size: 2rem;
-    }
-    .navbar-nav
-    {
-        position: relative;
-        left: 0%;
-    }
-form {
+</script>
+    <style>
+    	form {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -151,8 +127,7 @@ input {
     z-index: 9999 !important;
     position: absolute;
     left: 0;
-    top: 55px;
-    text-align: center;
+    top: 55px;;
 }
 }
 .search-view{
@@ -308,7 +283,7 @@ input {
         <div id="loader"></div>
     </div>
 
-<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+	<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -382,7 +357,6 @@ input {
                         </button>
 
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
-                            <a href="/"><img class="signup-logo" src="/img/signup/logo.svg" alt="" srcset=""></a>
                             <ul class="navbar-nav" id="navs">
                                 <li class="nav-item">
                                     <a class="nav-link" href="/" style="color:red;">Home</a>
@@ -402,41 +376,31 @@ input {
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contact">Contact Us</a>
                                 </li>
-                                    
-                        
+
                                 <li class="nav-item mobile-search">
                                     <div class="searchcontainer">
-                                        <img src="/img/searchbutton.png"class=" nav-images"alt="" srcset=""> 
-                                        <input type="text" id="search" placeholder="Search user"> 
-                                        
+                                    <input type="text" id="search" placeholder="Search user">
                                     <div class="search" id="srh"></div>
-                                     <ul class="search-view" id="search_list">
-                                        
-                                        <!-- <% users.forEach((user)=>{  %>
+                                    <ul class="search-view" id="search_list">
+                                        <% users.forEach((user)=>{  %>
                                             <li class="collection-item"><a href="/users/publicProfile/<%=user._id%>"><%= user.name%></a></li>
-                                        <% }) %> -->
+                                        <% }) %>
                                     </ul>
                                     </div>
                                 </li>
-
-                                <li class="nav-item">
-                                    <!-- <img src="/img/nav-user.png" class=" nav-images" alt="" srcset="">
-                                        <img src="/img/Vector.jpg"class=" nav-images" alt="" srcset=""> -->
-                                </li>
-                                <!-- <% if(flag==1){ %>
+                                <% if(flag==1){ %>
                                     <li class="nav-item">
                                         <a href="/users/logout" class="  btn_1 home_page_btn button logout">Logout</a>
                                     </li>
-                                <% } %> -->
+                                <% } %>
                                 
                                 
                                 
                             </ul>
                         </div>
-                         <% if(flag==0){ %>
-                           <a href="/users/signup" class="d-none d-sm-block btn_1 home_page_btn button"id="one" style="margin-right: -4vw;position: relative;">Login</a>  
+                        <% if(flag==0){ %>
+                            <a href="/users/signup" class="d-none d-sm-block btn_1 home_page_btn button"id="one" style="left: 10vw;position: relative;">Login</a>
                         <% } %>
-                       
                         
                     </nav>
                 </div>
