@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/themify-icons.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/index2.css">
+    <link rel="stylesheet" href="/css/chatbot.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
@@ -338,6 +339,9 @@ input {
   </div>
 </div> -->
 <body id="bodydiv">
+
+    <%- include("partials/chatbot") %>
+
     <!--::header part start::-->
     <header class="main_menu">
         <div class="container">
@@ -1150,6 +1154,7 @@ input {
             document.querySelector("#preloader").style.display = "none";
         }
     </script>
+    <script src="/js/chatbot.js"></script>
 </body>
 
 </html>

@@ -30,6 +30,7 @@ const indexRouter = require('./routes/index');
 const userRouter = require('./routes/users');
 const profileRouter = require('./routes/profile');
 const notesRouter = require('./routes/notes');
+const chatBotRouter = require('./routes/chatbot');
 
 //EJS
 
@@ -87,6 +88,9 @@ app.use('/',indexRouter);
 app.use('/users',userRouter);
 app.use('/users',profileRouter);
 app.use('/users',notesRouter);
+
+// For Chatbot
+app.use("/api/chatbot", chatBotRouter);
 
 
 app.get('*',(req,res)=>{
