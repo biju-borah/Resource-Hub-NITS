@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PROFILE</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/chartist/0.9.7/chartist.min.css'>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="/css/profile.css">
@@ -13,301 +14,357 @@
   <link rel="stylesheet" href="/css/signup.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript">
-    $(document).ready(function(){
-      $('.signIn').click(function(){
+    $(document).ready(function () {
+      $('.signIn').click(function () {
         $('.fold').toggleClass('active');
       })
     })
   </script>
   <style>
-    
-.card-alert button {
-  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: medium none;
-  color: #fff;
-  font-size: 2rem;
-  position: absolute;
-  right: 20px;
-  top: 11px;
-  color: white;
-}
-.sem-view,.type-view,.year-view{
-  margin-left:40px;
-}
-.branch-view,.prof-view{margin-left:0px;}
-@media (max-width: 768px){
-  .requested-notes{height:15vh;}
-  .branch-view{
-  position: relative;
-    left: 0vw;
-    margin-left: 0;
-  }
-  .date-view{margin-top: 0px;}
-  .sem-view{
+    .card-alert button {
+      background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+      border: medium none;
+      color: #fff;
+      font-size: 2rem;
+      position: absolute;
+      right: 20px;
+      top: 11px;
+      color: white;
+    }
+
+    .sem-view,
+    .type-view,
+    .year-view {
+      margin-left: 40px;
+    }
+
+    .branch-view,
+    .prof-view {
+      margin-left: 0px;
+    }
+
+    @media (max-width: 768px) {
+      .requested-notes {
+        height: 15vh;
+      }
+
+      .branch-view {
         position: relative;
-    left: 20vw;
-    margin-left: 0;
-  }
-  .prof-view{
+        left: 0vw;
+        margin-left: 0;
+      }
+
+      .date-view {
+        margin-top: 0px;
+      }
+
+      .sem-view {
         position: relative;
-    left: 0vw;
-    top: 3.5vh;
-    margin-left: 0;
-  }
-  .year-view{
+        left: 20vw;
+        margin-left: 0;
+      }
+
+      .prof-view {
         position: relative;
-    left: -8vw;
-    top: 3.2vh;
-    margin-left: 0;
-  }
-  .type-view{
-  position: relative;
-    left: -27vw;
-    top: 3.3vh;
-    margin-left: 0;
-  }
-}
-@media (max-width: 360px){
-  .requested-notes{height:25vh;}
-  .branch-view{
-     position: relative;
-    left: 0vw;
-    margin-left: 0;
-  }
-  .date-view{margin-top: 0px;}
-  .sem-view{
-     position: relative;
-       left: 14vw;
-    margin-left: 0;
-  }
-  .prof-view{
-         position: relative;
-    left: 0vw;
-    top: 3.5vh;
-    margin-left: 0;
-  }
-  .year-view{
+        left: 0vw;
+        top: 3.5vh;
+        margin-left: 0;
+      }
+
+      .year-view {
+        position: relative;
+        left: -8vw;
+        top: 3.2vh;
+        margin-left: 0;
+      }
+
+      .type-view {
+        position: relative;
+        left: -27vw;
+        top: 3.3vh;
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .requested-notes {
+        height: 25vh;
+      }
+
+      .branch-view {
+        position: relative;
+        left: 0vw;
+        margin-left: 0;
+      }
+
+      .date-view {
+        margin-top: 0px;
+      }
+
+      .sem-view {
+        position: relative;
+        left: 14vw;
+        margin-left: 0;
+      }
+
+      .prof-view {
+        position: relative;
+        left: 0vw;
+        top: 3.5vh;
+        margin-left: 0;
+      }
+
+      .year-view {
         position: relative;
         left: -19vw;
-    top: 3.2vh;
-    margin-left: 0;
-  }
-  .type-view{
-      position: relative;
-    left: -36vw;
-    top: 3.3vh;
-    margin-left: 0;
-  }
-}
-.card-alert a {
-  color: inherit;
-  font-weight: 500;
-}
-.card-style{
-  background:#26a69a;
-  font-size:1.2rem;
-  color:white;
-  letter-spacing:1.3px;
-}
-.card-alert a:hover {
-  color: inherit;
-  text-decoration: underline;
-}
-.user-details{
-  font-size:1.26rem;
-  font-weight: normal;
-  position: relative;
-  top:2px
-}
+        top: 3.2vh;
+        margin-left: 0;
+      }
 
-@media screen and (max-width: 768px)
- { 
-  #navtoggle{
-    display: block;
-    right: -10vw;
-    top: 25px;
-    }
-    .navbar{
-    width: 100vw;
-    }
-    .nav-links{
-    padding: 20px 20px;
-  }
-    .user-details{
-  font-size:1.2rem;
-}
-.collections-title span{
-	display:block;
-	margin-left:1.6vw;
-}
-  }
-  .logout1{
-    color:white !important;
-}
-@media (min-width: 767px){
-.logout1{
-    color:black;
-    position:relative;
-    font-weight:700;
-}
-.logo,.nav-links{
-  font-size:1rem;
-}
-.logo{font-size:1.8rem;}
-}
-.active { color: red; }
-   input[type='radio']:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        
-        left: -1px;
+      .type-view {
         position: relative;
-        background-color: #d1d3d1;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
+        left: -36vw;
+        top: 3.3vh;
+        margin-left: 0;
+      }
+    }
+
+    .card-alert a {
+      color: inherit;
+      font-weight: 500;
+    }
+
+    .card-style {
+      background: #26a69a;
+      font-size: 1.2rem;
+      color: white;
+      letter-spacing: 1.3px;
+    }
+
+    .card-alert a:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .user-details {
+      font-size: 1.26rem;
+      font-weight: normal;
+      position: relative;
+      top: 2px
+    }
+
+    @media screen and (max-width: 768px) {
+      #navtoggle {
+        display: block;
+        right: -10vw;
+        top: 25px;
+      }
+
+      .navbar {
+        width: 100vw;
+      }
+
+      .nav-links {
+        padding: 20px 20px;
+      }
+
+
+      .collections-title span {
+        display: block;
+        margin-left: 1.6vw;
+      }
+    }
+
+    .logout1 {
+      color: white !important;
+    }
+
+    @media (min-width: 767px) {
+      .logout1 {
+        color: black;
+        position: relative;
+        font-weight: 700;
+      }
+
+      .logo,
+      .nav-links {
+        font-size: 1rem;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+      }
+    }
+
+    .active {
+      color: red;
+    }
+
+    input[type='radio']:after {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+
+      left: -1px;
+      position: relative;
+      background-color: #d1d3d1;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid white;
     }
 
     input[type='radio']:checked:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        top: -2px;
-        left: -1px;
-        position: relative;
-        background-color: #ffa500;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      top: -2px;
+      left: -1px;
+      position: relative;
+      background-color: #ffa500;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid white;
     }
-    input[type="radio"]:not(:checked){
-      pointer-events:all;
-    }
-/*   .radio1{left:4vw;top:5vh;}
-   .radio2{left:12.6vw;top:5vh;}
-   .radio1-label{position: relative;left: -3.4vw;}
-    .radio2-label{position: relative;left: 1.4vw;}
-    @media (max-width:768px){
-    	 .radio1{left: 14vw;top: 4.6vh;}
-    	  .radio2{left: 40vw;top: 4.6vh;}
-      .radio1-label{left:-4.4vw;}
-      .radio2-label{left:9vw;}
-  }*/
-  .radio1-label{position: relative;left: -2.4vw;}
-.radio2-label{position: relative;left: 2.4vw;}
 
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #222;
-    z-index: 999999;
-}
-#loader {
-    display: block;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #9370DB;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-}
-#loader:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #BA55D3;
-    -webkit-animation: spin 3s linear infinite;
-    animation: spin 3s linear infinite;
-}
-#loader:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #FF00FF;
-    -webkit-animation: spin 1.5s linear infinite;
-    animation: spin 1.5s linear infinite;
-}
-@-webkit-keyframes spin {
-    0%   {
+    input[type="radio"]:not(:checked) {
+      pointer-events: all;
+    }
+
+    .radio1-label {
+      position: relative;
+      left: -2.4vw;
+    }
+
+    .radio2-label {
+      position: relative;
+      left: 2.4vw;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #222;
+      z-index: 999999;
+    }
+
+    #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #9370DB;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    #loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #BA55D3;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+    }
+
+    #loader:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FF00FF;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         transform: rotate(0deg);
-    }
-    100% {
+      }
+
+      100% {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
+      }
     }
-}
-@keyframes spin {
-    0%   {
+
+    @keyframes spin {
+      0% {
         -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         transform: rotate(0deg);
-    }
-    100% {
+      }
+
+      100% {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
+      }
     }
-}
-progress[value] {
-  /* Reset the default appearance */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-  opacity: 1;
-  -ms-flex-item-align: center;
+
+    progress[value] {
+      /* Reset the default appearance */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      opacity: 1;
+      -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 15px;
-  border-radius:10px;
-}
-progress{
-  border:none;
-  background:crimson;
-}
-progress{
-  color:#0288d1 !important;
-}
-progress::-webkit-progress-value{
-  background:#0288d1 !important;
-}
-progress::-moz-progress-value{
-  background:#0288d1 !important;
-}
-@media (max-width: 768px) {
-  progress[value] {
-    width: 12rem !important;
-  }
-}
-</style>
+      height: 15px;
+      border-radius: 10px;
+    }
+
+    progress {
+      border: none;
+      background: crimson;
+    }
+
+    progress {
+      color: #0288d1 !important;
+    }
+
+    progress::-webkit-progress-value {
+      background: #0288d1 !important;
+    }
+
+    progress::-moz-progress-value {
+      background: #0288d1 !important;
+    }
+
+    @media (max-width: 768px) {
+      progress[value] {
+        width: 12rem !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <div id="preloader">
     <div id="loader"></div>
-</div>
+  </div>
   <div id="simpleModal" class="modal1">
     <div class="modal-content fold1">
       <form action="/users/profile/<%= user._id %>" method="post" enctype="multipart/form-data">
@@ -318,601 +375,736 @@ progress::-moz-progress-value{
         <input type="text" name="semester" placeholder="Semester">
         <input type="text" name="phnNo" placeholder="Contact Number">
         <label class="custom-file-upload" id="lb" style="color:white !important;">
-          
-          <input name="profileImage" onchange="uploadFile()" type="file" id="file-upload2" class="file-path validate" style="position: relative;left:0.2vw">
+
+          <input name="profileImage" onchange="uploadFile()" type="file" id="file-upload2" class="file-path validate"
+            style="position: relative;left:0.2vw">
           <span><i class="fas fa-upload"></i></span>
           Upload Profile Image
           <hr>
           <span id="file-selected2"></span>
         </label>
         <p style="text-align: center; display: block;">
-        <input type="submit" value="Save Details"></p>      
+          <input type="submit" value="Save Details">
+        </p>
       </form>
     </div>
   </div>
-  <% var countModal =0 %>
-  <% notes.forEach((note) => { %>
+  <% var countModal=0 %>
+    <% notes.forEach((note)=> { %>
 
-  <div id="editModal<%= countModal%>" class="modal1">
-    <div class="modal-content fold1">
-      <form action="/users/editNote/profile/<%= note._id %> " method="post">
-        <p id="editClose<%= countModal%>">&times;</p>
-        <h5><b style="text-transform: uppercase;">EDIT <%= note.noteType %> DETAILS</b></h5>
-        <% if(note.noteType == "note"){ %>
-          <div id="note-ques" style="text-align: center;">
-            <span>
-              <input type="radio" id="note" name="noteType" value="note" checked="checked" class="radio1 radioedit1" style="opacity: 1;">
-              <label class="radiolabel radio_btn radio1-label" for="note">Notes</label>
-            </span>
-            <span>
-              <input type="radio" id="question" name="noteType" value="question" class="radio2 radioedit2" style="opacity: 1;">
-              <label class="radiolabel radio_btn radio2-label" for="question">Question Papers</label>
-            </span>
-          </div>
-        <% } %>
-        <% if(note.noteType == "question"){ %>
-          <div id="note-ques" style="text-align: center;">
-            <span>
-              <input type="radio" id="note" name="noteType" value="note" checked="checked" class="radio1 radioedit1" style="opacity: 1;">
-              <label class="radiolabel radio_btn radio1-label" for="note">Notes</label>
-            </span>
-            <span>
-              <input type="radio" id="question" name="noteType" value="question" checked="checked" class="radio2 radioedit2" style="opacity: 1;">
-              <label class="radiolabel radio_btn radio2-label" for="question">Question Papers</label>
-            </span>
-          </div>
-          <% } %>
-        
-        <div id="selectBranch">
-          <p>Select Branch:</p>
-          <select style="display: block;" required="true" name ="branch">
-            <option value="<%= note.branch%>" hidden><%= note.branch%></option>
-            <option value="CSE">Computer Science</option>
-            <option value="ECE">Electronics & Communication</option>
-            <option value="EE">Electrical</option>
-            <option value="ME">Mechanical</option>
-            <option value="CE">Civil</option>
-            <option value="EIE">Electronics & Instrumentation</option>
-          </select>
-        </div>
-
-        <div id="selectSem">
-          <p>Select Semester:</p>
-          <select style="display: block;" required="true" name="semester">
-            <option value="<%= note.semester%>" hidden><%= note.semester%></option>
-            <option value="1">1st</option>
-            <option value="2">2nd</option>
-            <option value="3">3rd</option>
-            <option value="4">4th</option>
-            <option value="5">5th</option>
-            <option value="6">6th</option>
-            <option value="7">7th</option>
-            <option value="8">8th</option>
-          </select>
-        </div>
-        <input type="text" name="subject" placeholder="Subject" value="<%= note.subject %>">
-        <input type="text" name="profName" placeholder="Professor's Name" value="<%= note.profName %>">
-        <input id="year" type="number" name = "year" placeholder="Year of the note" value=<%=note.year %> style="width: 100%;background: transparent;border: 1px solid gray;width: 100%;margin-bottom: 5px;height: 40px;padding: 10px 20px;box-sizing: border-box;border-radius: 40px;box-shadow: none;outline: none;color: #fff;background: transparent;border: 1px solid #fff;">
-        <p style="text-align: center; display: block;">
-          <input type="submit" value="Edit Details">
-        </p>      
-      </form>
-    </div>
-  </div>
-  <% countModal = countModal + 1 %>
-  <% }); %>
-
-  <nav class="navbar">
-    <a href="/" class="logo">Resource Hub</a>
-    <!-- <input type="checkbox" id="chkToggle"></input> -->
-    <ul class="main-nav" id="js-menu">
-      <li>
-        <a href="/" class="nav-links">Home</a>
-      </li>
-      <li>
-        <a href="/#about" class="nav-links">About</a>
-      </li>
-      <li>
-        <a href="/profile" class="nav-links active">Profile</a>
-      </li>
-      <li>
-        <a href="/users/branch" class="nav-links">Hub</a>
-      </li>
-      <li>
-        <a href="/#contact" class="nav-links">Contact Us</a>
-      </li>
-      <li>
-        <a href="/users/logout" class="nav-links logout1">Logout</a>
-      </li>
-    </ul>
-    <div id="navtoggle"> <i class="fas fa-bars"></i> </div>
-  </nav>
-
-  <div id="smallnavbar">
-    <ul class="smallmain-nav" id="smalljs-menu">
-        <li>
-          <a href="/" class="nav-links smallnav">Home</a>
-        </li>
-        <li>
-          <a href="/#about" class="nav-links smallnav">About</a>
-        </li>
-        <li>
-          <a href="/profile" class="nav-links smallnav active">Profile</a>
-        </li>
-        <li>
-          <a href="/users/branch" class="nav-links smallnav">Hub</a>
-        </li>
-        <li>
-          <a href="/#contact" class="nav-links smallnav">Contact Us</a>
-        </li>
-        <li>
-          <a href="/users/logout" class="nav-links smallnav">Logout</a>
-        </li>
-      </ul>
-</div>
-<!-- START MAIN -->
-<div id="main">
-  <!-- START WRAPPER -->
-  <div class="wrapper">
-
-    <!-- START CONTENT -->
-    <section id="content">
-      <div class="row">
-
-        <div class="col  m3">
-          
-        </div>
-        <div class="col  m3">
-        </div>       
-        <div class="col s12 m6" style="float:right;">
-          <%- include('./partials/messages') %>
-        </div>
-
-      </div>
-      <!--start container-->
-      <div class="container">
-
-        <div id="work-collections" style="margin-top: 6vh;">
-          <div class="row">
-            <div class="col l2"><h1></h1></div>
-            <div class="col s12 m6 l3">
-              <div id="profile-card" class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img src="/img/icons/user-banner.jpg" alt="user background">
-                  
-                </div>
-                <div class="card-content">
-                  <img src="<%= user.avatar ? user.avatar : '/img/avatar.png' %>" alt="" class="circle responsive-img card-profile-image" style="width: 140px;height: 120px;">
-                  <a id="modalBtn" class="btn-floating btn-move-up waves-effect waves-light darken-2 right">
-                    <p style="font-size: 15px; margin-top: 7.5px;">
-                      EDIT DETAILS
-                    </p>
-                  </a>
-
-                  <span class="card-title activator grey-text text-darken-4" style="text-transform: capitalize;"><%= user.name %></span>
-                  <p><i class="mdi-communication-email cyan-text text-darken-2"></i>Email Id: <%= user.email%></p>
-                  <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>Contact Number : <%= user.phnNo%></p>
-
-                </div>
+      <div id="editModal<%= countModal%>" class="modal1">
+        <div class="modal-content fold1">
+          <form action="/users/editNote/profile/<%= note._id %> " method="post">
+            <p id="editClose<%= countModal%>">&times;</p>
+            <h5><b style="text-transform: uppercase;">EDIT <%= note.noteType %> DETAILS</b></h5>
+            <% if(note.noteType=="note" ){ %>
+              <div id="note-ques" style="text-align: center;">
+                <span>
+                  <input type="radio" id="note" name="noteType" value="note" checked="checked" class="radio1 radioedit1"
+                    style="opacity: 1;">
+                  <label class="radiolabel radio_btn radio1-label" for="note">Notes</label>
+                </span>
+                <span>
+                  <input type="radio" id="question" name="noteType" value="question" class="radio2 radioedit2"
+                    style="opacity: 1;">
+                  <label class="radiolabel radio_btn radio2-label" for="question">Question Papers</label>
+                </span>
               </div>
-            </div>
-
-            <div class="col s12 m12 l6">
-              <ul id="projects-collection" class="collection">
-                <li class="collection-item avatar">
-                  <i class="mdi-file-folder circle light-blue darken-2"><span style="font-size: 1.6rem;font-style: normal;position: relative;top:-2px"><%= ratingValue%></span></i>
-                  <span class="collection-header" style="position: relative;top:10px;text-transform: uppercase;"><%= user.name %></span>
-                  <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
-                </li>
-                <li class="collection-item">
-                  <div class="row">
-                    <div class="col s6 l6">
-                      <span class="user-details">Branch - </span>
-                    </div>
-                    <div class="col s6 l6">
-                       <span style="font-size: 1.3rem;"><%= user.branch %></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="collection-item">
-                    <div class="row">
-                      <div class="col s6 l6">
-                          <span class="user-details">Semester - </span> 
-                        </div>
-                      <div class="col s6 l2">
-                        <span style="font-size: 1.3rem;"><%= user.semester %></span>
-                      </div>
-                    </div>
-                  </li>
-                <li class="collection-item">
-                  <div class="row">
-                    <div class="col s6 l6">
-                        <span class="user-details">Downloads - </span>
-                      </div>
-                    <div class="col s6 l2">
-                       <span style="font-size: 1.3rem;"><%= user.downloadCountUser %></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="collection-item">
-                  <div class="row">
-                    <div class="col s6 l6">
-                        <span class="user-details">Total Downloads of your uploads - </span>
-                      </div>
-                    <div class="col s6 l2">
-                       <span style="font-size: 1.3rem;"><%= user.notesDownloadedByUsers %></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="collection-item">
-                  <div class="row">
-                    <div class="col s6 l6">
-                        <span class="user-details">Uploads - </span> 
-                      </div>
-                    <div class="col s6 l2">
-                        <span style="font-size: 1.3rem;"><%= user.uploadsCount%></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="collection-item">
-                  <div class="row">
-                    <div class="col s6 l6">
-                        <span class="user-details">Profile Viewed - </span> 
-                      </div>
-                    <div class="col s6 l2">
-                        <span style="font-size: 1.3rem;"><%= user.profileViewCount %></span>
-                    </div>
-                  </div>
-                </li>
-                <li class="collection-item">
-                  <div class="row">
-                    <div class="col s6 l6">
-                        <span class="user-details">Reports - </span> 
-                      </div>
-                    <div class="col s6 l2">
-                        <span style="font-size: 1.3rem;"><%= user.reports %></span>
-                    </div>
-                  </div>
-                </li>
-                
-              </ul>
-            </div>
-            <div class="col l2"><h1></h1></div>
-          </div>
-        </div>
-        <!--work collections end-->
-        <!-- Floating Action Button -->
-        <div class="row">
-          <div class="col s12 m12 l2"><h1></h1></div>
-        <div class="col s12 m12 l8">
-          <ul id="issues-collection" class="collection">
-            <li class="collection-item avatar">
-              <i class="mdi-action-bug-report circle red darken-2"><span style="font-size: 3vh;font-style: normal;position: relative;top:-2px"><%= user.uploadsCount%></span></i>
-              <span class="collection-header">Notes</span>
-              <p>Uploaded by you</p>
-              <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
-            </li>
-            <% var countNote =0 %>
-            <% notes.forEach((note) => { %>
-              
-              <li class="collection-item">
-              <div class="row">
-                <div class="col s6">
-                  <p class="collections-title"><span>Subject - <%= note.subject%></span><span style="margin-left: 2vw;">Branch - <%= note.branch%></span> <span style="margin-left: 1.6vw;">Semester - <%= note.semester%></span> </p>
-                  <p class="collections-content">Professor Name - <%= note.profName%></p>
-                  <p class="collections-content">Year - <%= note.year%> <span style="margin-left: 1.6vw;">Type - <%= note.noteType%></span></p>
-                  <a target="_blank" href="<%= note.notesLoc %>" class="collections-title">Click here to view / download the note</a>
-                </div>
-                <div class="col s2" style="margin-top: 7vh;">
-                  <span class="task-cat pink accent-2"><%= floorvalue[countNote]%></span>
-                </div>
-                <div class="col s3" style="margin-top: 7vh;">
-                  
-                  <div class="progress">
-                    <% var rating = floorvalue[countNote] %>
-                    <div class="determinate" style="width: <%= rating * 20 %>%"></div>
-                  </div>
-                  
-                </div>
-                <div class="col s1" style="margin-top: 7vh;">
-                  
-                  <div class="">
-                    <a href="/users/note/delete/<%=note._id %>"<i class="fas fa-trash-alt"></i></a>
-                    <i class="fas fa-edit" id="editBtn<%= countNote %>" style="color: #00BCD4;
-                      cursor: pointer;margin-left:0.5vw"></i>
-                  </div>
-                  
-                </div>
-              </div>
-            </li>
-            <% countNote = countNote + 1 %>
-        <% }); %>
-          </ul>
-          <div class="pagination">
-            <% if(lastExact!=0){ %>
-              <a href="/profile?page=<%=page-1%>&limit=3" class="prev"><i class="fas fa-angle-left"></i></a>
-            <% }%>
-            
-            
-            <% for(var i=1;i<=lastExact;i++){%>
-              <% if(i==page){ %>
-                <a href="/profile?page=<%=i%>&limit=3" class="num numactive"><%=i%></a>
-              <% }else{%>
-                <a href="/profile?page=<%=i%>&limit=3" class="num"><%=i%></a>
               <% } %>
-              
-            <% }%>
-            <% if(lastExact!=0){ %>
-            <a href="/profile?page=<%=page+1%>&limit=3" class="next"><i class="fas fa-angle-right"></i></a>
-            <% }%>
-          </div>
-        </div>
-        <div class="col l2"><h1></h1></div>
-      </div>
-      <!--end container-->
-      <!--card widgets start-->
-      <div id="card-widgets" style="margin-top:4vh;">
-        <div class="row">
-          <div class="col s12 m12 l2"><h1></h1></div>
-          <div class="col s12 m12 l4 tooltip">
-            <ul id="task-card" class="collection with-header">
-              <li class="collection-header cyan" style="height: 100px;" >
-                <h4 class="task-card-title">Requested Notes</h4>
-                <span class="tooltiptext">Notes requested by users</span>
-              </li>
-              <% if(reqNote.length!=0) { %>
-                <% reqNote.forEach((note) => { %>
-                  <li class="collection-item dismissable requested-notes" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-                  
-                  <label for="task1" style="text-decoration: none;font-size: 2.8vh;padding-bottom: 7px;padding-top: 7px;">Subject - <%= note.subject%>
-                    <a href="#" class="secondary-content"><span class="ultra-small date-view"><%= note.date%></span></a>
-                  </label>
-                  <span class="task-cat teal branch-view">Branch - <%=note.branch%></span>
-                  <span class="task-cat purple sem-view">Sem - <%= note.semester%></span>
-                  <span class="task-cat red type-view">Type - <%=note.noteType %></span>
-                  <span class="task-cat green year-view">Year - <%=note.year %></span>
-                  <br>
-                  <span class="task-cat cyan prof-view">Prof. Name - <%=note.profName %></span>
-                </li>
-                <% }); %>
-              <% } %>
-
-              <% if(doneNote.length!=0) { %>
-                <% doneNote.forEach((note) => { %>
-                  <li class="collection-item dismissable" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-                  
-                  <label for="task1" style="text-decoration: line-through;font-size: 2.8vh;padding-bottom: 7px;padding-top: 7px;">Subject - <%= note.subject%>
-                    <a href="#" class="secondary-content" style="margin-top: 4px;"><span class="ultra-small"><%= note.date%></span></a>
-                  </label>
-                  <span class="task-cat teal">Branch - <%=note.branch%></span>
-                  <span class="task-cat purple" style="margin-left: 25px;">Sem - <%= note.semester%></span>
-                  <span class="task-cat red"style="margin-left: 30px;">Type - <%=note.noteType %></span>
-                  
-                  <span class="task-cat green"style="margin-left: 3.6vw;">Year - <%=note.year %></span>
-                  <span class="task-cat cyan"style="margin-left: 4.8vw;">Prof. Name - <%=note.profName %></span>
-                  <span class="task-cat blue"style="margin-left: 25px;">Uploaded</span>
-                </li>
-                <% }); %>
-              <% } %>
-              
-            </ul>
-            <div class="pagination">
-              <% if(lastExactRequest!=0){ %>
-              <a href="/profile?pageRequest=<%=pageRequest-1%>&limit2=4" class="prev"><i class="fas fa-angle-left"></i></a>
-              <% } %>
-              <% for(var i=1;i<=lastExactRequest;i++){%>
-                <% if(i==pageRequest){ %>
-                  <a href="/profile?pageRequest=<%=i%>&limit2=4" class="num numactive"><%=i%></a>
-                <% }else{%>
-                  <a href="/profile?pageRequest=<%=i%>&limit2=4" class="num"><%=i%></a>
-                <% } %>
-                
-              <% }%>
-              <% if(lastExactRequest!=0){ %>
-              <a href="/profile?pageRequest=<%=pageRequest+1%>&limit2=4" class="next"><i class="fas fa-angle-right"></i></a>
-              <% }%>
-            </div>
-          </div>
-          
-
-          <div class="col s12 m6 l4">
-            <div id="flight-card" class="card">
-              <div class="card-header">
-                <div class="card-title signIn tooltip1">
-                  <h4 class="flight-card-title">Add Notes to Hub</h4>
-                  <span class="tooltiptext1">Click here to add notes</span>
-                  <!-- <p class="flight-card-date">June 18, Thu 04:50</p> -->
-                </div>
-              </div>
-              <div class="fold">
-                <form action="/users/notes/<%= user._id %>" method="post" enctype="multipart/form-data">
+                <% if(note.noteType=="question" ){ %>
                   <div id="note-ques" style="text-align: center;">
                     <span>
-                      <input type="radio" id="note" name="noteType" value="note" class="radio1" required="true">
+                      <input type="radio" id="note" name="noteType" value="note" checked="checked"
+                        class="radio1 radioedit1" style="opacity: 1;">
                       <label class="radiolabel radio_btn radio1-label" for="note">Notes</label>
                     </span>
                     <span>
-                      <input type="radio" id="question" name="noteType" value="question" class="radio2" required="true">
+                      <input type="radio" id="question" name="noteType" value="question" checked="checked"
+                        class="radio2 radioedit2" style="opacity: 1;">
                       <label class="radiolabel radio_btn radio2-label" for="question">Question Papers</label>
                     </span>
                   </div>
-                  <div id="selectBranch">
-                    <p>Select Branch:</p>
-                    <select style="display: block;" required="true" name ="branch">
-                      <option value="CSE">Computer Science</option>
-                      <option value="ECE">Electronics & Communication</option>
-                      <option value="EE">Electrical</option>
-                      <option value="ME">Mechanical</option>
-                      <option value="CE">Civil</option>
-                      <option value="EIE">Electronics & Instrumentation</option>
-                    </select>
+                  <% } %>
+
+                    <div id="selectBranch">
+                      <p>Select Branch:</p>
+                      <select style="display: block;" required="true" name="branch">
+                        <option value="<%= note.branch%>" hidden>
+                          <%= note.branch%>
+                        </option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="ECE">Electronics & Communication</option>
+                        <option value="EE">Electrical</option>
+                        <option value="ME">Mechanical</option>
+                        <option value="CE">Civil</option>
+                        <option value="EIE">Electronics & Instrumentation</option>
+                      </select>
+                    </div>
+
+                    <div id="selectSem">
+                      <p>Select Semester:</p>
+                      <select style="display: block;" required="true" name="semester">
+                        <option value="<%= note.semester%>" hidden>
+                          <%= note.semester%>
+                        </option>
+                        <option value="1">1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th</option>
+                        <option value="5">5th</option>
+                        <option value="6">6th</option>
+                        <option value="7">7th</option>
+                        <option value="8">8th</option>
+                      </select>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" value="<%= note.subject %>">
+                    <input type="text" name="profName" placeholder="Professor's Name" value="<%= note.profName %>">
+                    <input id="year" type="number" name="year" placeholder="Year of the note" value=<%=note.year %>
+                    style="width: 100%;background: transparent;border: 1px solid gray;width: 100%;margin-bottom:
+                    5px;height: 40px;padding: 10px 20px;box-sizing: border-box;border-radius: 40px;box-shadow:
+                    none;outline: none;color: #fff;background: transparent;border: 1px solid #fff;">
+                    <p style="text-align: center; display: block;">
+                      <input type="submit" value="Edit Details">
+                    </p>
+          </form>
+        </div>
+      </div>
+      <% countModal=countModal + 1 %>
+        <% }); %>
+
+          <nav class="navbar">
+
+            <a href="/" class="logo">Resource Hub</a>
+
+            <!-- <input type="checkbox" id="chkToggle"></input> -->
+
+            <ul class="main-nav" id="js-menu">
+              <li>
+                <a href="/" class="nav-links">Home</a>
+              </li>
+              <li>
+                <a href="/#about" class="nav-links">About</a>
+              </li>
+              <li>
+                <a href="/profile" class="nav-links active">Profile</a>
+              </li>
+              <li>
+                <a href="/users/branch" class="nav-links">Hub</a>
+              </li>
+              <li>
+                <a href="/#contact" class="nav-links">Contact Us</a>
+              </li>
+              <li>
+                <a href="/users/logout" class="nav-links logout1">Logout</a>
+              </li>
+            </ul>
+            <div id="navtoggle"> <i class="fas fa-bars"></i> </div>
+          </nav>
+
+          <div id="smallnavbar">
+            <ul class="smallmain-nav" id="smalljs-menu">
+              <li>
+                <a href="/" class="nav-links smallnav">Home</a>
+              </li>
+              <li>
+                <a href="/#about" class="nav-links smallnav">About</a>
+              </li>
+              <li>
+                <a href="/profile" class="nav-links smallnav active">Profile</a>
+              </li>
+              <li>
+                <a href="/users/branch" class="nav-links smallnav">Hub</a>
+              </li>
+              <li>
+                <a href="/#contact" class="nav-links smallnav">Contact Us</a>
+              </li>
+              <li>
+                <a href="/users/logout" class="nav-links smallnav">Logout</a>
+              </li>
+            </ul>
+          </div>
+          <!-- START MAIN -->
+
+          <div id="main">
+            <!-- START WRAPPER -->
+
+            <div class="wrapper">
+
+              <!-- START CONTENT -->
+              <section id="content">
+
+                <div class="row" style="margin-bottom: 0px;">
+                  <div class="col  m3">
+                  </div>
+                  <div class="col  m3">
+                  </div>
+                  <div class="col s12 m6" style="float:right;">
+                    <%- include('./partials/messages') %>
+                  </div>
+                </div>
+
+                <!-- BANNER -->
+
+                <div class="banner">
+                  <div class="card-bg">
+
+                    <!-- Work Collections start here -->
+
+                    <div id="work-collections" class="card-content">
+
+                      <div class="name-card" id="profile-card">
+                        <div class="card-img">
+                          <img class="image" src="<%= user.avatar ? user.avatar : '/img/avatar.png' %>" alt=""
+                            style="width: 120px;height: 120px; border-radius: 50%;">
+                        </div>
+                        <p class="user-name">
+                          <%= user.name %>
+                        </p>
+
+                        <p class="user-text"><i></i>Email Id: <%= user.email%>
+                        </p>
+                        <p class="user-text"><i></i>Contact Number : <%= user.phnNo%>
+                        </p>
+
+                        <a id="modalBtn" class="edit-btn">
+                          <p style="font-size: 16px; margin: 0px 0px; padding: 5px 25px; color: #fff;">
+                            EDIT DETAILS
+                          </p>
+                        </a>
+
+
+                      </div>
+
+                      <div class="list-card">
+                        <ul id="projects-collection" class="list-items">
+
+                          <li class="item">
+                            <div class="row">
+                              <div class="col s6 l6">
+                                <span class="user-details">Branch - </span>
+                              </div>
+                              <div class="  col s6 l6">
+                                <span class="user-info" style="font-size: 1.3rem; color: 
+                                #786CFF; font-weight: 600;">
+                                  <%= user.branch %>
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="row">
+                              <div class="col s6 l6">
+                                <span class="user-details">Semester - </span>
+                              </div>
+                              <div class="col">
+                                <span class="user-info" style="font-size: 1.3rem; color: 
+                                #786CFF; font-weight: 600; ">
+                                  <%= user.semester %>
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="row">
+                              <div class="col s6 l6">
+                                <span class="user-details">Downloads - </span>
+                              </div>
+                              <div class="col s6 l2">
+                                <span class="user-info" style="font-size: 1.3rem; color: 
+                                #786CFF; font-weight: 600; ">
+                                  <%= user.downloadCountUser %>
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="row">
+                              <div class="col s6 l6">
+                                <span class="user-details">Total Downloads of your uploads - </span>
+                              </div>
+                              <div class="col s6 l2">
+                                <span class="user-info" style="font-size: 1.3rem; color: 
+                                #786CFF; font-weight: 600; ">
+                                  <%= user.notesDownloadedByUsers %>
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="row">
+                              <div class="col s6 l6">
+                                <span class="user-details">Uploads - </span>
+                              </div>
+                              <div class="col s6 l2">
+                                <span class="user-info" style="font-size: 1.3rem; color: 
+                                #786CFF; font-weight: 600; ">
+                                  <%= user.uploadsCount%>
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="row">
+                              <div class="col s6 l6">
+                                <span class="user-details">Profile Viewed - </span>
+                              </div>
+                              <div class="col s6 l2">
+                                <span class="user-info" style="font-size: 1.3rem; color: 
+                                #786CFF; font-weight: 600;">
+                                  <%= user.profileViewCount %>
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="item">
+                            <div class="row">
+                              <div class="col s6 l6">
+                                <span class="user-details">Reports - </span>
+                              </div>
+                              <div class="col s6 l2">
+                                <span class="user-info" style="font-size: 1.3rem; color: 
+                                #786CFF; font-weight: 600; ">
+                                  <%= user.reports %>
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+
+                        </ul>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Work Collections ends here -->
+
+                <section class="container-2">
+
+                  <ul class="tabs">
+                    <li class="tab-item"><a href="#item1" class="active">Item 1</a></li>
+                    <li class="tab-item"><a href="#item2">Item 2</a></li>
+                    <li class="tab-item"><a href="#item3">Item 3</a></li>
+                  </ul>
+
+                  <div class="wrapper_tab-content">
+
+                    <article id="item1" class="tab-content content-visible">
+                      <h1>Item One</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eligendi nam nulla
+                        dignissimos provident laudantium quaerat placeat doloremque incidunt alias.
+                      </p>
+                    </article>
+
+                    <article id="item2" class="tab-content">
+                      <h1>Item Two</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eligendi nam nulla
+                        dignissimos provident laudantium quaerat placeat doloremque incidunt alias. </p>
+                    </article>
+
+                    <article id="item3" class="tab-content">
+                      <h1>Item Three</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eligendi nam nulla
+                        dignissimos provident laudantium quaerat placeat doloremque incidunt alias. </p>
+                      </p>
+                    </article>
+
                   </div>
 
-                  <div id="selectSem">
-                    <p>Select Semester:</p>
-                    <select style="display: block;" required="true" name="semester">
-                      <option value="1">1st</option>
-                      <option value="2">2nd</option>
-                      <option value="3">3rd</option>
-                      <option value="4">4th</option>
-                      <option value="5">5th</option>
-                      <option value="6">6th</option>
-                      <option value="7">7th</option>
-                      <option value="8">8th</option>
-                    </select>
-                  </div>
-                  <!-- <label for="year" style="color: #fff; font-size: 15px;">Year:</label> -->
-                  <input id="year" type="number" name = "year" placeholder="Year of the note" style="width: 100%;background: transparent;border: 1px solid gray;width: 100%;margin-bottom: 5px;height: 40px;padding: 10px 20px;box-sizing: border-box;border-radius: 40px;box-shadow: none;outline: none;color: #fff;background: transparent;border: 1px solid #fff;">
+                </section>
 
-                  <input type="text" name="subject" placeholder="Subject" style="margin-top: 2vh;" required>
-                  <input type="text" name="profName" placeholder="Professor Name" required>
-                  <label class="custom-file-upload" id="lb1" style="color:white !important;">
-          
-                    <input name="notesSelected" onchange="fileInput1()" type="file" id="file-upload1" class="file-path validate" style="position: relative;left:0.2vw" required>
-                    <span><i class="fas fa-upload"></i></span>
-                    Upload Files
-                    <hr>
-                    <span id="file-selected1"></span>
-                  </label>
-                  <p style="text-align: center; display: block;">
-                    <input type="submit" value="Upload"></p>
-                    <!-- <button class="btn btn-primary d-none" id="upload_btn" class="btn btn-primary" style="display: none;">
+                <!--card widgets start-->
+
+
+                <div id="card-widgets" style="margin-top:4vh; ">
+                  <div class="row">
+
+
+
+                    <div class="col s12 m12 l4 tooltip" >
+                      <ul id="task-card" class="collection with-header">
+                        <li class="collection-header cyan" style="height: 100px;">
+                          <h4 class="task-card-title">Requested Notes</h4>
+                          <span class="tooltiptext">Notes requested by users</span>
+                        </li>
+                        <% if(reqNote.length!=0) { %>
+                          <% reqNote.forEach((note)=> { %>
+                            <li class="collection-item dismissable requested-notes"
+                              style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+                              <label for="task1"
+                                style="text-decoration: none;font-size: 2.8vh;padding-bottom: 7px;padding-top: 7px;">Subject
+                                - <%= note.subject%>
+                                  <a href="#" class="secondary-content"><span class="ultra-small date-view">
+                                      <%= note.date%>
+                                    </span></a>
+                              </label>
+                              <span class="task-cat teal branch-view">Branch - <%=note.branch%></span>
+                              <span class="task-cat purple sem-view">Sem - <%= note.semester%></span>
+                              <span class="task-cat red type-view">Type - <%=note.noteType %></span>
+                              <span class="task-cat green year-view">Year - <%=note.year %></span>
+                              <br>
+                              <span class="task-cat cyan prof-view">Prof. Name - <%=note.profName %></span>
+                            </li>
+                            <% }); %>
+                              <% } %>
+
+                                <% if(doneNote.length!=0) { %>
+                                  <% doneNote.forEach((note)=> { %>
+                                    <li class="collection-item dismissable"
+                                      style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+                                      <label for="task1"
+                                        style="text-decoration: line-through;font-size: 2.8vh;padding-bottom: 7px;padding-top: 7px;">Subject
+                                        - <%= note.subject%>
+                                          <a href="#" class="secondary-content" style="margin-top: 4px;"><span
+                                              class="ultra-small">
+                                              <%= note.date%>
+                                            </span></a>
+                                      </label>
+                                      <span class="task-cat teal">Branch - <%=note.branch%></span>
+                                      <span class="task-cat purple" style="margin-left: 25px;">Sem - <%= note.semester%>
+                                          </span>
+                                      <span class="task-cat red" style="margin-left: 30px;">Type - <%=note.noteType %>
+                                      </span>
+
+                                      <span class="task-cat green" style="margin-left: 3.6vw;">Year - <%=note.year %>
+                                      </span>
+                                      <span class="task-cat cyan" style="margin-left: 4.8vw;">Prof. Name -
+                                        <%=note.profName %>
+                                      </span>
+                                      <span class="task-cat blue" style="margin-left: 25px;">Uploaded</span>
+                                    </li>
+                                    <% }); %>
+                                      <% } %>
+
+                      </ul>
+                      <div class="pagination">
+                        <% if(lastExactRequest!=0){ %>
+                          <a href="/profile?pageRequest=<%=pageRequest-1%>&limit2=4" class="prev"><i
+                              class="fas fa-angle-left"></i></a>
+                          <% } %>
+                            <% for(var i=1;i<=lastExactRequest;i++){%>
+                              <% if(i==pageRequest){ %>
+                                <a href="/profile?pageRequest=<%=i%>&limit2=4" class="num numactive">
+                                  <%=i%>
+                                </a>
+                                <% }else{%>
+                                  <a href="/profile?pageRequest=<%=i%>&limit2=4" class="num">
+                                    <%=i%>
+                                  </a>
+                                  <% } %>
+
+                                    <% }%>
+                                      <% if(lastExactRequest!=0){ %>
+                                        <a href="/profile?pageRequest=<%=pageRequest+1%>&limit2=4" class="next"><i
+                                            class="fas fa-angle-right"></i></a>
+                                        <% }%>
+                      </div>
+                    </div>
+
+
+                    <div class="col s12 m6 l4">
+                      <div id="flight-card" class="card">
+                        <div class="card-header">
+                          <div class="card-title signIn tooltip1">
+                            <h4 class="flight-card-title">Add Notes to Hub</h4>
+                            <span class="tooltiptext1">Click here to add notes</span>
+                            <!-- <p class="flight-card-date">June 18, Thu 04:50</p> -->
+                          </div>
+                        </div>
+                        <div class="fold">
+                          <form action="/users/notes/<%= user._id %>" method="post" enctype="multipart/form-data">
+                            <div id="note-ques" style="text-align: center;">
+                              <span>
+                                <input type="radio" id="note" name="noteType" value="note" class="radio1"
+                                  required="true">
+                                <label class="radiolabel radio_btn radio1-label" for="note">Notes</label>
+                              </span>
+                              <span>
+                                <input type="radio" id="question" name="noteType" value="question" class="radio2"
+                                  required="true">
+                                <label class="radiolabel radio_btn radio2-label" for="question">Question
+                                  Papers</label>
+                              </span>
+                            </div>
+                            <div id="selectBranch">
+                              <p>Select Branch:</p>
+                              <select style="display: block;" required="true" name="branch">
+                                <option value="CSE">Computer Science</option>
+                                <option value="ECE">Electronics & Communication</option>
+                                <option value="EE">Electrical</option>
+                                <option value="ME">Mechanical</option>
+                                <option value="CE">Civil</option>
+                                <option value="EIE">Electronics & Instrumentation</option>
+                              </select>
+                            </div>
+
+                            <div id="selectSem">
+                              <p>Select Semester:</p>
+                              <select style="display: block;" required="true" name="semester">
+                                <option value="1">1st</option>
+                                <option value="2">2nd</option>
+                                <option value="3">3rd</option>
+                                <option value="4">4th</option>
+                                <option value="5">5th</option>
+                                <option value="6">6th</option>
+                                <option value="7">7th</option>
+                                <option value="8">8th</option>
+                              </select>
+                            </div>
+                            <!-- <label for="year" style="color: #fff; font-size: 15px;">Year:</label> -->
+                            <input id="year" type="number" name="year" placeholder="Year of the note"
+                              style="width: 100%;background: transparent;border: 1px solid gray;width: 100%;margin-bottom: 5px;height: 40px;padding: 10px 20px;box-sizing: border-box;border-radius: 40px;box-shadow: none;outline: none;color: #fff;background: transparent;border: 1px solid #fff;">
+
+                            <input type="text" name="subject" placeholder="Subject" style="margin-top: 2vh;" required>
+                            <input type="text" name="profName" placeholder="Professor Name" required>
+                            <label class="custom-file-upload" id="lb1" style="color:white !important;">
+
+                              <input name="notesSelected" onchange="fileInput1()" type="file" id="file-upload1"
+                                class="file-path validate" style="position: relative;left:0.2vw" required>
+                              <span><i class="fas fa-upload"></i></span>
+                              Upload Files
+                              <hr>
+                              <span id="file-selected1"></span>
+                            </label>
+                            <p style="text-align: center; display: block;">
+                              <input type="submit" value="Upload">
+                            </p>
+                            <!-- <button class="btn btn-primary d-none" id="upload_btn" class="btn btn-primary" style="display: none;">
                       <span class="spinner-border spinner-border-sm">Uploading</span>
                     </button> -->
-                </form>
-              </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="col l2">
+                        <h1></h1>
+                      </div>
+                    </div>
+
+                  </div>
+
+                    <!-- Floating Action Button -->
+                    <div class="row">
+                      <div class="col s12 m12 l2">
+                        <h1></h1>
+                      </div>
+                      <div class="col s12 m12 l8">
+                        <ul id="issues-collection" class="collection">
+                          <li class="collection-item avatar">
+                            <i class="mdi-action-bug-report circle red darken-2"><span
+                                style="font-size: 3vh;font-style: normal;position: relative;top:-2px">
+                                <%= user.uploadsCount%>
+                              </span></i>
+                            <span class="collection-header">Notes</span>
+                            <p>Uploaded by you</p>
+                            <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                          </li>
+                          <% var countNote=0 %>
+                            <% notes.forEach((note)=> { %>
+  
+                              <li class="collection-item">
+                                <div class="row">
+                                  <div class="col s6">
+                                    <p class="collections-title"><span>Subject - <%= note.subject%></span><span
+                                        style="margin-left: 2vw;">Branch - <%= note.branch%></span> <span
+                                        style="margin-left: 1.6vw;">Semester - <%= note.semester%></span> </p>
+                                    <p class="collections-content">Professor Name - <%= note.profName%>
+                                    </p>
+                                    <p class="collections-content">Year - <%= note.year%> <span
+                                          style="margin-left: 1.6vw;">Type - <%= note.noteType%></span></p>
+                                    <a target="_blank" href="<%= note.notesLoc %>" class="collections-title">Click here
+                                      to view / download the note</a>
+                                  </div>
+                                  <div class="col s2" style="margin-top: 7vh;">
+                                    <span class="task-cat pink accent-2">
+                                      <%= floorvalue[countNote]%>
+                                    </span>
+                                  </div>
+                                  <div class="col s3" style="margin-top: 7vh;">
+  
+                                    <div class="progress">
+                                      <% var rating=floorvalue[countNote] %>
+                                        <div class="determinate" style="width: <%= rating * 20 %>"></div>
+                                    </div>
+  
+                                  </div>
+                                  <div class="col s1" style="margin-top: 7vh;">
+  
+                                    <div class="">
+                                      <a href="/users/note/delete/<%= note._id %>"  class="fas fa-trash-alt"></a>
+                                      <i class="fas fa-edit" id="editBtn<%= countNote %>" style="color: #00BCD4;
+                                           cursor: pointer;margin-left:0.5vw"></i>
+                                    </div>
+  
+                                  </div>
+                                </div>
+                              </li>
+                              <% countNote=countNote + 1 %>
+                                <% }); %>
+                        </ul>
+                        <div class="pagination">
+                          <% if(lastExact!=0){ %>
+                            <a href="/profile?page=<%=page-1%>&limit=3" class="prev"><i class="fas fa-angle-left"></i></a>
+                            <% }%>
+  
+  
+                              <% for(var i=1;i<=lastExact;i++){%>
+                                <% if(i==page){ %>
+                                  <a href="/profile?page=<%=i%>&limit=3" class="num numactive">
+                                    <%=i%>
+                                  </a>
+                                  <% }else{%>
+                                    <a href="/profile?page=<%=i%>&limit=3" class="num">
+                                      <%=i%>
+                                    </a>
+                                    <% } %>
+  
+                                      <% }%>
+                                        <% if(lastExact!=0){ %>
+                                          <a href="/profile?page=<%=page+1%>&limit=3" class="next"><i
+                                              class="fas fa-angle-right"></i></a>
+                                          <% }%>
+                        </div>
+                      </div>
+                      <div class="col l2">
+                        <h1></h1>
+                      </div>
+                    </div>
+
+              </section>
+              <!-- END CONTENT -->
             </div>
-            <div class="col l2"><h1></h1></div>
+            <!-- END WRAPPER -->
+
           </div>
+          <!-- END MAIN -->
 
+          <!-- google map api -->
+          <script>
+            editmodal = document.getElementById(`editModal0`);
+            editmodalBtn = document.getElementById(`editBtn0`);
+            editcloseBtn = document.getElementById(`editClose0`);
 
-        </div>
-    </section>
-    <!-- END CONTENT -->
-    </div>
-    <!-- END WRAPPER -->
+            editmodalBtn.addEventListener('click', openEditModal);
+            function openEditModal() {
+              editmodal.style.display = 'block';
+            }
 
-    </div>
-    <!-- END MAIN -->
+            editcloseBtn.addEventListener('click', closeEditModal);
+            function closeEditModal() {
+              editmodal.style.display = 'none';
+            }
 
-    <!-- google map api -->
-    <script>
-        editmodal = document.getElementById(`editModal0`);
-        editmodalBtn = document.getElementById(`editBtn0`);
-        editcloseBtn = document.getElementById(`editClose0`);
-        
-        editmodalBtn.addEventListener('click', openEditModal);
-        function openEditModal(){
-          editmodal.style.display = 'block';
-        }
-        
-        editcloseBtn.addEventListener('click', closeEditModal);
-        function closeEditModal(){
-          editmodal.style.display = 'none';
-        }
-        
-        window.addEventListener('click', clickOutside);
-        function clickOutside(e){
-          if(e.target == editmodal){
-            editmodal.style.display = 'none';
-          }
-        }
-        window.onkeyup = function (e){
-          if(e.keyCode == 27){
-            this.editmodal.style.display = 'none';
-          }
-        }
+            window.addEventListener('click', clickOutside);
+            function clickOutside(e) {
+              if (e.target == editmodal) {
+                editmodal.style.display = 'none';
+              }
+            }
+            window.onkeyup = function (e) {
+              if (e.keyCode == 27) {
+                this.editmodal.style.display = 'none';
+              }
+            }
 
 
 
 
-        editmodal1 = document.getElementById(`editModal1`);
-        editmodalBtn1 = document.getElementById(`editBtn1`);
-        editcloseBtn1 = document.getElementById(`editClose1`);
-        
-        editmodalBtn1.addEventListener('click', openEditModal1);
-        function openEditModal1(){
-          editmodal1.style.display = 'block';
-        }
-        
-        editcloseBtn1.addEventListener('click', closeEditModal1);
-        function closeEditModal1(){
-          editmodal1.style.display = 'none';
-        }
-        
-        window.addEventListener('click', clickOutside1);
-        function clickOutside1(e){
-          if(e.target == editmodal1){
-            editmodal1.style.display = 'none';
-          }
-        }
-        window.onkeyup = function (e){
-          if(e.keyCode == 27){
-            this.editmodal1.style.display = 'none';
-          }
-        }
+            editmodal1 = document.getElementById(`editModal1`);
+            editmodalBtn1 = document.getElementById(`editBtn1`);
+            editcloseBtn1 = document.getElementById(`editClose1`);
+
+            editmodalBtn1.addEventListener('click', openEditModal1);
+            function openEditModal1() {
+              editmodal1.style.display = 'block';
+            }
+
+            editcloseBtn1.addEventListener('click', closeEditModal1);
+            function closeEditModal1() {
+              editmodal1.style.display = 'none';
+            }
+
+            window.addEventListener('click', clickOutside1);
+            function clickOutside1(e) {
+              if (e.target == editmodal1) {
+                editmodal1.style.display = 'none';
+              }
+            }
+            window.onkeyup = function (e) {
+              if (e.keyCode == 27) {
+                this.editmodal1.style.display = 'none';
+              }
+            }
 
 
 
 
 
-        editmodal2 = document.getElementById(`editModal2`);
-        editmodalBtn2 = document.getElementById(`editBtn2`);
-        editcloseBtn2 = document.getElementById(`editClose2`);
-        
-        editmodalBtn2.addEventListener('click', openEditModal2);
-        function openEditModal2(){
-          editmodal2.style.display = 'block';
-        }
-        
-        editcloseBtn2.addEventListener('click', closeEditModal2);
-        function closeEditModal2(){
-          editmodal2.style.display = 'none';
-        }
-        
-        window.addEventListener('click', clickOutside2);
-        function clickOutside2(e){
-          if(e.target == editmodal2){
-            editmodal2.style.display = 'none';
-          }
-        }
-        window.onkeyup = function (e){
-          if(e.keyCode == 27){
-            this.editmodal2.style.display = 'none';
-          }
-        }
-      
-    
-    </script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAZnaZBXLqNBRXjd-82km_NO7GUItyKek"></script>
+            editmodal2 = document.getElementById(`editModal2`);
+            editmodalBtn2 = document.getElementById(`editBtn2`);
+            editcloseBtn2 = document.getElementById(`editClose2`);
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/chartist/0.9.7/chartist.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.1/Chart.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.jquery.min.js'></script>
-<script  src="/js/profile.js"></script>
+            editmodalBtn2.addEventListener('click', openEditModal2);
+            function openEditModal2() {
+              editmodal2.style.display = 'block';
+            }
+
+            editcloseBtn2.addEventListener('click', closeEditModal2);
+            function closeEditModal2() {
+              editmodal2.style.display = 'none';
+            }
+
+            window.addEventListener('click', clickOutside2);
+            function clickOutside2(e) {
+              if (e.target == editmodal2) {
+                editmodal2.style.display = 'none';
+              }
+            }
+            window.onkeyup = function (e) {
+              if (e.keyCode == 27) {
+                this.editmodal2.style.display = 'none';
+              }
+            }
 
 
-<script>
-  drake = dragula({
-    revertOnSpill: true,
-    mirrorContainer: document.querySelector('.movecontainer')
-}).on('drag', function(el, source) {
-    // On mobile this prevents the default page scrolling while dragging an item.
-    $(document).on('touchstart', function(e) {
-        e.preventDefault();
-    });
-}).on('drop', function(el, target, source, sibling) {
-    // On mobile this turns on default page scrolling after the end of a drag drop.
-    $(document).off('touchstart');
-});
-  </script>
-  <script> 
-    window.onload = function(){
-        document.querySelector("#preloader").style.display = "none";
-    }
-</script>
+          </script>
+          <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAZnaZBXLqNBRXjd-82km_NO7GUItyKek"></script>
+
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/chartist/0.9.7/chartist.min.js'></script>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.js'></script>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.1/Chart.js'></script>
+          <script
+            src='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.jquery.min.js'></script>
+          <script src="/js/profile.js"></script>
+
+
+          <script>
+            drake = dragula({
+              revertOnSpill: true,
+              mirrorContainer: document.querySelector('.movecontainer')
+            }).on('drag', function (el, source) {
+              // On mobile this prevents the default page scrolling while dragging an item.
+              $(document).on('touchstart', function (e) {
+                e.preventDefault();
+              });
+            }).on('drop', function (el, target, source, sibling) {
+              // On mobile this turns on default page scrolling after the end of a drag drop.
+              $(document).off('touchstart');
+            });
+          </script>
+          <script>
+            window.onload = function () {
+              document.querySelector("#preloader").style.display = "none";
+            }
+          </script>
 </body>
+
 </html>

@@ -418,4 +418,43 @@ function myfunction() {
 }
 
 
+/************************* TAB SECTION JS *****************************/
 
+
+const selectTab = element => {
+  
+
+  const active = document.querySelector('.active-2');
+
+  const visible = document.querySelector('.content-visible');
+  
+ 
+  const tabContent = document.getElementById(element.href.split('#')[1]);
+
+  if (active) {
+    active.classList.remove('active-2');
+  }
+  
+  
+  element.classList.add('active-2');
+  
+  
+  if (visible) {
+    visible.classList.remove('content-visible');
+  }
+  
+
+  tabContent.classList.add('content-visible');
+  
+}
+
+
+document.addEventListener('click', event => {
+  
+  
+  if (event.target.matches('.tab-item a')) {
+  
+    selectTab(event.target);
+    
+  }
+}, false);
